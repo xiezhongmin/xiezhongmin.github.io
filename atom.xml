@@ -4,7 +4,7 @@
   <title><![CDATA[谢忠敏的个人博客]]></title>
   <link href="http://xiezhongmin.github.io/atom.xml" rel="self"/>
   <link href="http://xiezhongmin.github.io/"/>
-  <updated>2015-08-31T14:33:25+08:00</updated>
+  <updated>2015-08-31T15:51:52+08:00</updated>
   <id>http://xiezhongmin.github.io/</id>
   <author>
     <name><![CDATA[谢忠敏]]></name>
@@ -14,19 +14,19 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Ss]]></title>
-    <link href="http://xiezhongmin.github.io/blog/2015/08/31/ss/"/>
-    <updated>2015-08-31T13:43:44+08:00</updated>
-    <id>http://xiezhongmin.github.io/blog/2015/08/31/ss</id>
+    <title type="html"><![CDATA[文章标题]]></title>
+    <link href="http://xiezhongmin.github.io/blog/2015/08/31/wen-zhang-biao-ti/"/>
+    <updated>2015-08-31T14:38:34+08:00</updated>
+    <id>http://xiezhongmin.github.io/blog/2015/08/31/wen-zhang-biao-ti</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[文章标题]]></title>
-    <link href="http://xiezhongmin.github.io/blog/2015/08/31/wen-zhang-biao-ti/"/>
-    <updated>2015-08-31T13:39:10+08:00</updated>
-    <id>http://xiezhongmin.github.io/blog/2015/08/31/wen-zhang-biao-ti</id>
+    <title type="html"><![CDATA[Ss]]></title>
+    <link href="http://xiezhongmin.github.io/blog/2015/08/31/ss/"/>
+    <updated>2015-08-31T13:43:44+08:00</updated>
+    <id>http://xiezhongmin.github.io/blog/2015/08/31/ss</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
