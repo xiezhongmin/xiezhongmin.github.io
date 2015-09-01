@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
     <head>
         <meta charset="utf-8">
-            <title>文章标题 - 谢忠敏的个人博客</title>
+            <title>“UIImageView的内容模式” - 谢忠敏的个人博客</title>
             <meta name="author" content="谢忠敏">
                 
                 
-                <meta name="description" content="
-">
+                <meta name="description" content="UIImageView的内容模式 UIImageView的内容缩放模式contentMode 规律1: 但凡是枚举值中包含Scale单词的都会对图片进行拉伸, 只是拉伸的模型不太一样 1.UIViewContentModeScaleToFill 默认, &hellip;">
                     
                         
                         <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
                                 <meta name="viewport" content="width=device-width, initial-scale=1">
                                     
                                     
-                                    <link rel="canonical" href="http://xiezhongmin.github.io/blog/2015/08/31/wen-zhang-biao-ti/">
+                                    <link rel="canonical" href="http://xiezhongmin.github.io/blog/2013/04/05/uiimageviewde-nei-rong-mo-shi/">
                                         <link href="/favicon.png" rel="icon">
                                             <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
                                                 <link href="/atom.xml" rel="alternate" title="谢忠敏的个人博客" type="application/atom+xml">
@@ -69,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">文章标题</h1>
+      <h1 class="entry-title">“UIImageView的内容模式”</h1>
     
     
       <p class="meta">
@@ -78,14 +77,55 @@
 
 
 
-<time class='entry-date' datetime='2015-08-31T14:38:34+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2015</span></span> <span class='time'>2:38 pm</span></time>
+<time class='entry-date' datetime='2013-04-05T08:54:17+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>8:54 am</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><h1>UIImageView的内容模式</h1>
+
+<h2>UIImageView的内容缩放模式<code>contentMode</code></h2>
+
+<h3>规律1: 但凡是枚举值中包含Scale单词的都会对图片进行拉伸, 只是拉伸的模型不太一样</h3>
+
+<h4>1.UIViewContentModeScaleToFill</h4>
+
+<ul>
+<li>默认, 如果设置图片的内容模式为ScaleToFill, 系统将会按照UIImageView的宽高比, 对图片进行缩放. 直到图片填充整个UIImageView为止</li>
+</ul>
+
+
+<h3>规律2:但凡枚举中包含Aspect单词的都会按照图片的宽高比进行缩放</h3>
+
+<h4>2.UIViewContentModeScaleAspectFit</h4>
+
+<ul>
+<li>如果设置图片的内容模式为ScaleAspectFit, 系统会按照图片的宽高比缩放图片, 直到图片的宽度<code>或</code>者高度和UIImageView一样为止, 并且居中显示</li>
+</ul>
+
+
+<h4>3. UIViewContentModeScaleAspectFill</h4>
+
+<ul>
+<li><p>如果设置图片的内容模式为ScaleAspectFill,系统会按照图片的宽高比缩放图片, 直到图片的宽<code>和</code>高和UIImageView一样为止, 也就是说直到图片能够填充整个UIImageView为止,并且居中显示</p></li>
+<li><p>这样图片很有可能会超出父控件可以设置超出部分裁剪掉</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="nb">self</span><span class="p">.</span><span class="n">contentMode</span> <span class="o">=</span>  <span class="n">UIViewContentModeScaleAspectFill</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">self</span><span class="p">.</span><span class="n">clipsToBounds</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>下列图很好的说明了各种模式的作用:</h2>
+
+<p><img src="image/1354011953_1051.png" alt="" /></p>
 </div>
 
 
@@ -101,7 +141,7 @@
 
 
 
-<time class='entry-date' datetime='2015-08-31T14:38:34+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2015</span></span> <span class='time'>2:38 pm</span></time>
+<time class='entry-date' datetime='2013-04-05T08:54:17+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>8:54 am</span></time>
       
 
 
@@ -109,7 +149,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://xiezhongmin.github.io/blog/2015/08/31/wen-zhang-biao-ti/" data-via="" data-counturl="http://xiezhongmin.github.io/blog/2015/08/31/wen-zhang-biao-ti/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://xiezhongmin.github.io/blog/2013/04/05/uiimageviewde-nei-rong-mo-shi/" data-via="" data-counturl="http://xiezhongmin.github.io/blog/2013/04/05/uiimageviewde-nei-rong-mo-shi/" >Tweet</a>
   
   
   
@@ -118,8 +158,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/08/31/ss/" title="Previous Post: ss">&laquo; ss</a>
       
+        <a class="basic-alignment right" href="/blog/2015/08/31/ss/" title="Next Post: ss">ss &raquo;</a>
       
     </p>
   </footer>
